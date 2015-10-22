@@ -13,3 +13,5 @@ app/main.js
 app/js/
 app/css/
 resources/public/js/
+*-init.clj
+*.log

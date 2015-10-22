@@ -3,11 +3,6 @@
             [om.dom :as dom :include-macros true]
             [sablono.core :as html :refer-macros [html]]))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;; debugging
-(enable-console-print!)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 (defonce app-state (atom {:msg "test"
                           :connected false}))
 
@@ -27,10 +22,6 @@
            [:p.event.listening "Connecting to Device"])]
         ]))))
 
-
 (defn main []
   (om/root application app-state
            {:target (. js/document (getElementById "app"))}))
-
-;; start the application
-(main)
